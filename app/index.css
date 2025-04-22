@@ -1,0 +1,606 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*Navbar and image and use the media queries*/
+.hav img {
+	margin-left: 50px;
+	margin-top: 10px;
+	width: 170px;
+	height: 40px;
+	float: left;
+	
+}
+
+
+.menu {
+	width: 100%;
+	height: 50px;
+	background-color: white;
+	border-bottom: 1px solid #C0B283;
+	font-family: "Arial";
+}
+
+.menu ul {
+	list-style: none;
+	position: relative;
+}
+
+.menu ul li {
+	width: 150px;
+	float: left;
+}
+
+.menu a {
+	padding: 15px;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	background-color: white;
+	color: #C0B283;
+}
+
+.menu ul ul {
+	position: absolute;
+	visibility: hidden;
+}
+
+.menu ul li:hover ul {
+	visibility: visible;
+}
+
+.menu a:hover {
+	background-color: #F7DCCE;
+	color: white;
+}
+
+.menu ul ul li {
+	float: none;
+	border-bottom: solid 1px #C0B283;
+}
+
+label[for="btnMenu"] {
+	padding: 5px;
+	background-color: white;
+	color: #C0B283;
+	font-family: "Arial";
+	text-align: center;
+	font-size: 30px;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+}
+
+#btnMenu{
+	display: none;
+}
+
+label[for="btnMenu"] {
+	display: none;
+}		
+
+/*Media queries here have max width 900px can see in phone*/
+@media only screen and (max-width: 900px)  {
+	.hav img {
+		float: none;
+		margin-left: 10px;
+	}
+
+	label[for="btnMenu"] {
+		display: inline-block;
+	}
+
+	#btnMenu:checked ~ .menu {
+		margin-left: 0;
+	}
+
+	.menu {
+		margin-top: 5px;
+		margin-left: -100%;
+		transition: all .4s;
+	}
+
+	.menu ul li {
+		width: 100%;
+		float: none;
+	}
+
+	.menu ul ul {
+		position: static;
+		overflow: hidden;
+		max-height: 0;
+		transition: all .4s;
+	}
+
+	.menu ul li:hover ul {
+		height: auto;
+		max-height: 200px;
+	}
+
+	.prev, .next {
+		visibility: hidden;
+	}
+
+
+}
+
+@media only screen and (max-width: 1000px){
+	.count {
+		visibility: hidden;
+		margin-right: 0px;
+	}
+
+	#cart-info {
+		width: 50px;
+		height: 40px;
+		margin-top: 5px;
+	}
+
+
+
+
+}
+
+/*Slide Show in first page*/
+.myslides {
+	display: none;
+	margin-top: 20px;
+}
+
+#slide img {
+	vertical-align: middle;
+}
+
+.slideshow-container body {
+	position: fixed;
+}
+
+.prev, .next {
+	top: 50%;
+	position: absolute;
+	border-radius: 50%;
+	border: 1px solid #C0B283;
+	width: 50px;
+	height: 50px;
+	left: 170px;
+	cursor: pointer;
+	outline: none;
+	background-color: white;
+	color: #C0B283;
+	transition: all 0.3s;
+	font-size: 15px;
+ }
+
+ .prev:hover, .next:hover {
+ 	background: #F7DCCE;
+ 	color: white;
+ }
+
+.next {
+ 	left: calc(100% - 220px);
+}
+
+/*About Hav and social media in first page*/
+#about {
+	background: #F7DCCE;
+	margin-top: 150px;
+	font-family: "Arial";
+	height: 100%;
+}
+
+#about h1 {
+	text-align: center;
+	color: #C0B283;
+	padding: 40px;
+}
+
+#about p {
+	text-align: center;
+	margin: auto;
+	color: #C0B283;
+	width: 50%;
+}
+
+#about p a {
+	text-decoration: none;
+	color: #C0B283;
+	margin: 50px;
+}
+
+
+
+/*Social media in first page*/
+#social-media h4 {
+	font-family: "Arial";
+	color: #C0B283;
+	float: right;
+	margin-right: 20px;
+
+}
+
+.icons ul {
+	display: flex;
+	position: absolute;
+	bottom: -480px;
+	left: 95%;
+	transform: translate(-50%, -50%);
+}
+.icons ul li {
+	list-style: none;
+}
+
+.icons ul li a {
+	width: 40px;
+	height: 40px;
+	background: #fff;
+	text-align: center;
+	line-height: 40px;
+	font-size: 15px;
+	margin: 0 10px;
+	display: block;
+	border-radius: 50%;
+	position: relative;
+	overflow: hidden;
+	border: 3px solid #fff;
+	z-index: 1;
+}
+
+.icons ul li a .fa {
+	position: relative;
+	color: #262626;
+	transition: .5s;
+}
+
+.icons ul li a:hover .fa {
+	color: #fff;
+	transform: rotateY(360deg);
+	z-index: 3;
+}
+
+.icons ul li a:before {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #f00;
+	transition: .5s;
+	z-index: 2;
+}
+
+.icons ul li a:hover:before {
+	top: 0;
+}
+
+.icons ul li:nth-child(1) a:before {
+	background: #3b4999;
+}
+
+/*Valentine page*/
+h1 {
+	margin: 40px;
+	text-align: center;
+	color: #C0B283;
+	font-family: "Arial";
+}
+
+
+.column-img {
+    width: 33.33%;
+    padding: 5px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.store-img {
+	transition: all 1s ease-in-out;
+}
+
+.column-img:hover .store-img {
+  transform: scale(1.2);
+
+}
+.text {
+	font-family: "Arial";
+	text-align: center;
+	color: #C0B283;
+}
+
+.text p {
+	margin: auto;
+	width: 70%;
+	height: 130px;
+}
+
+
+
+/*This is necklaces and earrings page to sale*/
+.column {
+	float: left;
+	padding: 18px 18px;
+	color: #C0B283;
+	margin-bottom: 16px;
+	font-family: "Arial"; 
+}
+
+.card {
+	width: 400px;
+	height: 220px;
+	box-shadow: 4px 4px 4px 4px #F7DCCE;
+}
+
+
+.card img {
+	float: left;
+}
+
+.card-text {
+	margin: 10px;
+	padding: 0 16px;
+}
+
+.store-item-icon {
+	padding: 10px;
+	border: 0.1rem solid #C0B283;
+	background: white;
+	margin-top: 20px;
+	margin-left: 50px;
+	outline: 0;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 0.25rem;
+	color: #C0B283;
+}
+
+.store-item-icon:hover {
+	background: #F7DCCE;
+  	color: white;
+  	font-weight: bold;
+}
+
+.card-body::after, .row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+#store-item-price {
+	margin: 200px;
+}
+
+/*The expanding image and close expading image*/
+.container {
+	display: none; /*Hidden the iamge*/
+	position: fixed; /*To stay in same place*/
+	z-index: 1; 
+	padding-top: 50px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	overflow: auto;
+	background-color: black;
+	background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+	margin: auto;
+	display: block;
+	width: 100%;
+	max-width: 450px;
+}
+
+.closebtn {
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: white;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+.closebtn:hover,
+.closebtn:focus {
+	color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*This is the button items and the prices*/
+#cart-info {
+	font-family: "Arial";
+	border: 0.1rem solid #C0B283;
+	color: #C0B283;
+	cursor: pointer;
+	float: right;
+	margin-right: 20px;
+	border-radius: 0.25rem;
+	
+}
+
+.count {
+	padding: 2px;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+#cart-info:hover {
+	background-color: #F7DCCE;
+	color: white;
+}
+
+/*Cart hidden*/
+.cart {
+	font-family: "Arial";
+  	position: absolute;
+  	min-height: 10rem;
+  	top: 50px;
+  	right: 0;
+  	transition: all 0.3s ease-in-out;
+  	background: white;
+  	border: 0.1rem solid transparent;
+  	color: #C0B283;
+  	width: 0;
+  	overflow: hidden;
+}
+
+.cart:hover {
+	background: #F7DCCE;
+	color: white;
+}
+
+.cart img {
+	vertical-align: baseline;
+	margin-left: 0;
+	width: 30%;
+	height: 60%;
+	margin-top: 10px;
+}
+
+.show-cart {
+  width: 15rem;
+  padding: 0rem 1.5rem;
+  transform: rotateY(-360deg);
+}
+
+.cart-item-text {
+	float: right;
+	margin-top: 30px;
+	width: 150px;
+	height: 50px;
+}
+
+.cart i {
+	color: #C0B283;
+}
+
+.cart-total-container {
+	margin: 25px;
+	display: inline-flex;
+}
+
+#cart-total {
+	margin: 30px;
+}
+
+/* cart item */
+/* cart buttons */
+.cart-buttons-container {
+	display: inline-block;
+	margin: 20px;
+}
+
+#clear-cart {
+	border: 1px solid #C0B283;
+	padding: 10px;
+	border-radius: 5px;
+	color: #C0B283;
+	text-decoration: none;
+}
+
+#clear-cart:hover {
+	color: white;
+}
+
+#check-out {
+	border: 1px solid #C0B283;
+	margin-left: 20px;
+	padding: 10px;
+	border-radius: 5px;
+	color: #C0B283;
+	text-decoration: none;
+}
+
+#check-out:hover {
+	color: white;
+}
+
+/*Contact Style*/
+
+form {
+	color: #C0B283;
+	max-width: 450px;
+	margin: 0 auto 50px;
+}
+
+input {
+	border: 3px solid #C0B283;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+}
+
+.submit-wrap {
+	text-align: right;
+}
+
+.btn {
+	color: #C0B283;
+	background: white;
+	font-size: 14px; 
+	text-transform: uppercase;
+	width: 25%;
+
+}
+
+.btn:hover {
+	background: #F7DCCE;
+	color: white;
+}
+
+input:focus {
+	outline: none;
+	border-color: #FBF7EC;
+}
+
+textarea {
+	border: 3px solid #C0B283;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+	height: 150px;
+}
+
+textarea:focus {
+	outline: none;
+	border-color: #FBF7EC;
+}
+
+.contact label {
+	width: 50%;
+	float: left; 
+	box-sizing: border-box;
+}
+
+.contact label:nth-child(1) {
+	padding-right: 10px;
+}
+
+.contact label:nth-child(2) {
+	padding-left: 10px;
+}
+
+label {
+	display: block;
+	margin-bottom: 20px;
+}
+
+label span {
+	display: block;
+}
+
+/*Privacy page*/
+#policy {
+	color: #C0B283;
+	font-family: Helvetica;
+	text-align: justify;
+	width: 90%;
+	margin-left: 70px;
+	margin-top: 60px;
+}
+
+

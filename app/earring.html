@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HAV</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+	<input type="checkbox" id="btnMenu">
+	<label for="btnMenu">&#9776;</label>
+
+	<!--Button cart info says the item and the total price-->
+	<div id="cart-info">
+        <span class="iconShop"><i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 20px; margin: 13px;"></i></span>
+        <div class="count">
+            <p><span id="item-count" > 0 </span> <span id="item-name"> item </span><span class="item-total"> 0€</span></p>
+        </div>
+    </div>
+
+    <!--This is the invisible the list cart who can see when press the button-->  	
+       <div id="cart" class="cart">
+    
+			<!--end of  cart item -->
+          	<!-- cart total -->
+          	<div class="cart-total-container">
+            	<h5>Total:</h5>
+            	<h5> <strong id="cart-total">  0€</strong> </h5>
+          	</div>
+          	<!--end cart total -->
+          	<!-- cart buttons -->
+          	<div class="cart-buttons-container">
+            	<!--<a href="#" id="clear-cart">clear cart</a>-->
+            	<a href="#" id="check-out">checkout</a>
+          	</div>
+          	<!--end of  cart buttons -->
+          	<!--  -->
+        </div>
+
+	<div class="hav">
+		<img src="Images/HAV2.jpg">
+	</div>
+
+	<nav class="menu">
+		<ul>
+			<li><a href="index.html">About</a></li>
+			<li><a href="#">Collection</a>
+				<ul>
+					<li><a href="valentine.html">Valentine's day</a></li>
+					<li><a href="spring.html">Spring</a></li>
+					<li><a href="summer.html">Summer</a></li>
+					<li><a href="christmas.html">Christmas</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Jewelry</a>
+				<ul>
+					<li><a href="necklace.html">Necklaces</a></li>
+					<li><a href="earring.html">Earrings</a></li>
+				</ul>
+			</li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+		
+	</nav>
+	
+	<h1>Earrings</h1>
+	<div class="row" class="store-items" id="store-items">
+		
+		<!--Single item-->
+		<div class="column" data-item="1">
+			<div class="card">
+				<div class="box">
+					<img src="img/1-earring.jpg" style="width: 40%;" onclick="myFunction(this);">
+					<button class="store-item-icon"><i>Shopping Bag</i></button>
+				</div>
+				<div class="card-body">
+					<div class="card-text">
+						<h2 id="store-item-name">Pink opal</h2>
+						<p class="store-item-text">Cluster earrings with pink opal and smokey quartz bead.</p>
+						<p class="store-item-value"><strong id="store-item-price"> 100€</strong></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Single item-->
+		<div class="column" data-item="1">
+			<div class="card">
+				<div class="box">
+					<img src="img/2-earring.jpg" style="width: 40%;" onclick="myFunction(this);">
+					<button class="store-item-icon"><i>Shopping Bag</i></button>
+				</div>
+				<div class="card-body">
+					<div class="card-text">
+						<h2 id="store-item-name">Hoop earrings</h2>
+						<p class="store-item-text">Hoop earrings with green amethyst cube and moss aquamarine.</p>
+						<p class="store-item-value"><strong id="store-item-price"> 100€</strong></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Single item-->
+		<div class="column" data-item="1">
+			<div class="card">
+				<div class="box">
+					<img src="img/3-earring.jpg" style="width: 40%;" onclick="myFunction(this);">
+					<button class="store-item-icon"><i>Shopping Bag</i></button>
+				</div>
+				<div class="card-body">
+					<div class="card-text">
+						<h2 id="store-item-name">Green amethyst</h2>
+						<p class="store-item-text">Green amethyst cluster with London blue topaz drop.</p>
+						<p class="store-item-value"><strong id="store-item-price"> 100€</strong></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Single item-->
+		<div class="column" data-item="1">
+			<div class="card">
+				<div class="box">
+					<img src="img/4-earring.jpg" style="width: 40%;" onclick="myFunction(this);">
+					<button class="store-item-icon"><i>Shopping Bag</i></button>
+				</div>
+				<div class="card-body">
+					<div class="card-text">
+						<h2 id="store-item-name">Golden citrine</h2>
+						<p class="store-item-text">Aquamarine cluster earrings with golden citrine triangle bead.</p>
+						<p class="store-item-value"><strong id="store-item-price"> 100€</strong></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Single item-->
+		<div class="column" data-item="1">
+			<div class="card">
+				<div class="box">
+					<img src="img/5-earring.jpg" style="width: 40%;" onclick="myFunction(this);">
+					<button class="store-item-icon"><i>Shopping Bag</i></button>
+				</div>
+				<div class="card-body">
+					<div class="card-text">
+						<h2 id="store-item-name">Small pink</h2>
+						<p class="store-item-text">Large green amethyst earrings with small pink tourmaline bead.</p>
+						<p class="store-item-value"><strong id="store-item-price"> 100€</strong></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Single item-->
+		<div class="column" data-item="1">
+			<div class="card">
+				<div class="box">
+					<img src="img/6-earring.jpg" style="width: 40%;" onclick="myFunction(this);">
+					<button class="store-item-icon"><i>Shopping Bag</i></button>
+				</div>
+				<div class="card-body">
+					<div class="card-text">
+						<h2 id="store-item-name">Earrings amethyst</h2>
+						<p class="store-item-text">Medium sized earrings with  green amethyst and turquoise.</p>
+						<p class="store-item-value"><strong id="store-item-price"> 100€</strong></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Single item-->
+		<div class="column" data-item="1">
+			<div class="card">
+				<div class="box">
+					<img src="img/7-earring.jpg" style="width: 40%;" onclick="myFunction(this);">
+					<button class="store-item-icon"><i>Shopping Bag</i></button>
+				</div>
+				<div class="card-body">
+					<div class="card-text">
+						<h2 id="store-item-name">White druzy</h2>
+						<p class="store-item-text">Large white druzy earrings.</p>
+						<p class="store-item-value"><strong id="store-item-price"> 100€</strong></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Single item-->
+		<div class="column" data-item="1">
+			<div class="card">
+				<div class="box">
+					<img src="img/8-earring.jpg" style="width: 40%;" onclick="myFunction(this);">
+					<button class="store-item-icon"><i>Shopping Bag</i></button>
+				</div>
+				<div class="card-body">
+					<div class="card-text">
+						<h2 id="store-item-name">Topaz cluster earrings</h2>
+						<p class="store-item-text">Mystic pink topaz cluster earrings with  aquamarine bead.</p>
+						<p class="store-item-value"><strong id="store-item-price"> 100€</strong></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Single item-->
+		<div class="column" data-item="1">
+			<div class="card">
+				<div class="box">
+					<img src="img/9-earring.jpg" style="width: 40%;" onclick="myFunction(this);">
+					<button class="store-item-icon"><i>Shopping Bag</i></button>
+				</div>
+				<div class="card-body">
+					<div class="card-text">
+						<h2 id="store-item-name">Pink mystic</h2>
+						<p class="store-item-text">Pink mystic topaz and rose quartz earrings.</p>
+						<p class="store-item-value"><strong id="store-item-price"> 100€</strong></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Single item-->
+		<div class="column" data-item="1">
+			<div class="card">
+				<div class="box">
+					<img src="img/10-earring.jpg" style="width: 40%;" onclick="myFunction(this);">
+					<button class="store-item-icon"><i>Shopping Bag</i></button>
+				</div>
+				<div class="card-body">
+					<div class="card-text">
+						<h2 id="store-item-name">Rose quartz</h2>
+						<p class="store-item-text">Flower earrings with watermelon tourmaline and rose quartz.</p>
+						<p class="store-item-value"><strong id="store-item-price"> 100€</strong></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Single item-->
+		<div class="column" data-item="1">
+			<div class="card">
+				<div class="box">
+					<img src="img/11-earring.jpg" style="width: 40%;" onclick="myFunction(this);">
+					<button class="store-item-icon"><i>Shopping Bag</i></button>
+				</div>
+				<div class="card-body">
+					<div class="card-text">
+						<h2 id="store-item-name">Chalcedony</h2>
+						<p class="store-item-text">Flower earrings with mystic pink topaz and pink chalcedony beads.</p>
+						<p class="store-item-value"><strong id="store-item-price"> 100€</strong></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="container">
+		<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+		<img class="modal-content" id="expandedImg" style="width: 100%;">
+		<div id="imgtext"></div>
+	</div>
+
+
+<script type="text/javascript" src="jewelry.js"></script>
+</body>
+</html>
